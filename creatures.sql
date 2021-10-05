@@ -13,6 +13,17 @@ CREATE TABLE hobbits(
     personality character varying(50)
 );
 
+CREATE TABLE allies(
+    wizard character varying(50),
+    elf character varying(50)
+);
+
+CREATE TABLE guardians(
+    elf character varying(50),
+    hobbit character varying(50)
+);
+
+
 
 INSERT INTO wizards(name, power)
 VALUES
@@ -33,3 +44,18 @@ VALUES
 ('Frodo', 'careful'),
 ('Sam', 'brave'),
 ('Bilbo', 'greedy');
+
+
+INSERT INTO allies(wizard, elf)
+VALUES
+('Gandalf', 'Legolas'),
+('Gandalf', 'Arwen'),
+('Saruman', 'Elrond'),
+('Saruman', 'Legolas');
+
+
+INSERT INTO guardians(elf, hobbit)
+VALUES
+('Legolas', 'Frodo'),
+('Arwen', 'Sam'),
+('Elrond', 'Bilbo');
